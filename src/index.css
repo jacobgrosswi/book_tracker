@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --color-surface: 248 250 252;
+  --color-surface-muted: 241 245 249;
+  --color-border: 226 232 240;
+  --color-text: 15 23 42;
+  --color-text-muted: 100 116 139;
+  --color-primary: 14 165 233;
+  --color-primary-dark: 2 132 199;
+}
+
+:root.dark {
+  color-scheme: dark;
+  --color-surface: 15 23 42;
+  --color-surface-muted: 30 41 59;
+  --color-border: 51 65 85;
+  --color-text: 226 232 240;
+  --color-text-muted: 148 163 184;
+  --color-primary: 56 189 248;
+  --color-primary-dark: 14 116 144;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+}
+
+.table-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(var(--color-border)) transparent;
+}
+
+.table-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.table-scroll::-webkit-scrollbar-thumb {
+  background-color: rgb(var(--color-border));
+  border-radius: 999px;
+}
